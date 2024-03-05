@@ -1,0 +1,188 @@
+<!-- ЮЛЯ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEbSURBVHgBtdU9T8JAHMfx3x1V62J8B25Ozq6+ABeNujpp4mR8A0YT34SDi3Fw0WhinIENFkYWNhYGCAkPLRAIx/0HSGkKvd6f+ybX9PqQT3pDTwRB8CyEeIKjBB1cImJ+4goR0Uk53/35fR+dgdHBYQ7XD/5i7kVvHh3nOu3WFl5fhrBNxeYy/sDJ6TbuHn1sKi/pIiHNhkK1MoFJ9doUQU+ZA9TlzY5eqqn+ml2kdX/eXwnIdS8W/8caGYCTTHuAi6QCXMQI4CDGgC2SCbBBMgNZESsgC+KBESEs4LO0B5O+3kb41iMp6yWKRr+VCz2SYi1RHKHiP8glQClVkFIqWHZ16+PvY7ivT1mbVmq0/YZhqGjAVXMELiNkBrrMfdcCB+zYAAAAAElFTkSuQmCC" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css"
+    />
+    
+    <script type="module" crossorigin src="/Rookie-Coders/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/Rookie-Coders/assets/vendor-9b4a9007.js">
+    <link rel="modulepreload" crossorigin href="/Rookie-Coders/assets/openbook-5a33adba.js">
+    <link rel="stylesheet" href="/Rookie-Coders/assets/openbook-0c567da0.css">
+    <link rel="stylesheet" href="/Rookie-Coders/assets/vendor-aa8b7909.css">
+  </head>
+  <body>
+    <div class="container">
+      <header id="header" class="header">
+  <div class="container header_container">
+    <a href="./index.html" class="header_logo" aria-label="Logo">
+      <svg class="header_svg" width="24" height="24">
+        <use href="/Rookie-Coders/assets/symbol-defs-406116a7.svg#icon-logook"></use>
+      </svg>
+      <svg class="header_svg" width="77" height="14">
+        <use href="/Rookie-Coders/assets/symbol-defs-406116a7.svg#icon-Bookshelf"></use>
+      </svg>
+      <span>Logo</span>
+    </a>
+    <nav class="navigation">
+      <ul class="navigation_list">
+        <li class="navigation_item">
+          <a
+            class="navigation_link_home"
+            href="./index.html"
+            aria-label="Link to home page"
+            id="homeLink"
+            >Home</a
+          >
+        </li>
+        <li class="navigation_item">
+          <a
+            class="navigation_link_shopping"
+            href="./shopping-list.html"
+            aria-label="Link to Shopping list"
+            id="shoppingListLink"
+            >Shopping list
+            <svg class="basket" width="20" height="20">
+              <use
+                href="/Rookie-Coders/assets/symbol-defs-406116a7.svg#icon-basket"
+              ></use></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_right">
+      <div class="header_togglers">
+        <label for="toggler" class="switch">
+          <input
+            id="toggler"
+            type="checkbox"
+            class="switch_input"
+            aria-label="Toggle menu"
+          />
+          <span class="switch_slider"></span>
+        </label>
+        <button
+          type="button"
+          class="burger"
+          data-action="open-modal"
+          aria-label="Toggle color theme"
+        >
+          <svg class="burger_button" width="28" height="28">
+            <use href="/Rookie-Coders/assets/symbol-defs-952eba38.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <button
+          class="burger_close"
+          type="button"
+          data-action="close-modal"
+          aria-label="Close modal"
+        />
+        <svg class="header_icon_close" width="21" height="21">
+          <use href="../img/symbol-defs.svg#icon-closed"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="backdrop">
+    <div class="header_navigation_window">
+      <nav class="modal__nav">
+        <ul class="nav__List-menu">
+          <li class="home__item">
+            <a
+              class="nav__link--current"
+              href="./index.html"
+              aria-label="Link to home page"
+              >Home</a
+            >
+          </li>
+          <li class="shop__item">
+            <a
+              class="nav__shopping"
+              href="./shopping-list.html"
+              aria-label="Link to Shopping list"
+              >Shopping list
+              <svg class="nav__basket" width="20" height="20">
+                <use
+                  href="/Rookie-Coders/assets/symbol-defs-406116a7.svg#icon-basket"
+                ></use></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <div class="shopping-container-with-support">
+        <div class="shopping-list-support">
+          <div class="for__support">
+  <div class="supporters">
+    <div class="supporters__title">
+      <h3 class="supporters__heading">Support Ukraine</h3>
+      <svg class="supporters__icon">
+        <use href="/Rookie-Coders/assets/symbol-defs-952eba38.svg#icon-Ukraine"></use>
+      </svg>
+    </div>
+    <div class="swiper">
+      <ul class="supporters_list swiper-wrapper"></ul>
+    </div>
+    <button class="supporters__btn">
+      <span>Scroll down</span>
+      <svg class="supporters__btn-icon" width="20" height="20">
+        <use href="/Rookie-Coders/assets/symbol-defs-952eba38.svg#my-ikon"></use>
+      </svg>
+    </button>
+
+    
+  </div>
+</div>
+
+        </div>
+        <div class="section">
+          <div class="shopping-list-div html.dark-mode & {}">
+            <h1 class="shopping_item">
+              Shopping <span class="span-color">List</span>
+            </h1>
+            <div class="empty-shopping-list-main">
+              <p class="empty-shopping-list html.dark-mode & {}">
+                This page is empty, add some books and proceed to order.
+              </p>
+              <img
+                class="empty-shopping-img"
+                src="/Rookie-Coders/assets/shoppinglistmobile-a43bd610.png"
+                width="265"
+                height="198"
+              />
+            </div>
+            <div class="js-books-container"></div>
+            <div id="pagination2" class="tui-pagination"></div>
+            <div class="shopping-list-loader-container">
+              <div id="shopping-list-loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- тимчасова кнопка -->
+    <!-- <button type="button" class="add-book">Add books to local storage</button> -->
+    <!-- ============== -->
+
+    
+  </body>
+</html>
